@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "components",
+  "info": {
+    "name": "Component"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "collection": "ingredient"
+    },
+    "meals": {
+      "collection": "meal",
+      "via": "component"
+    }
+  }
+}

@@ -16,6 +16,10 @@
     "dishes": {
       "collection": "dish",
       "via": "meal"
+    },
+    "component": {
+      "via": "meals",
+      "model": "component"
     }
   }
 }
