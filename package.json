@@ -1,31 +1,37 @@
 {
   "name": "keto-meal-planner",
-  "version": "0.0.0",
   "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "build": "node ace build",
-    "start": "node ace serve --watch",
-    "lint": "eslint . --ext=.ts"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
-  "devDependencies": {
-    "@adonisjs/assembler": "^2.1.5",
-    "adonis-preset-ts": "^1.0.4",
-    "eslint": "^7.8.1",
-    "eslint-plugin-adonis": "^1.0.15",
-    "pino-pretty": "^4.2.1",
-    "typescript": "^4.0.2",
-    "youch": "^2.0.10",
-    "youch-terminal": "^1.0.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@adonisjs/ace": "^6.9.4",
-    "@adonisjs/core": "^5.0.0-preview-rc-1.12",
-    "@adonisjs/fold": "^6.4.0",
-    "@adonisjs/lucid": "^8.4.2",
-    "luxon": "^1.25.0",
-    "pg": "^8.3.3",
-    "proxy-addr": "^2.0.6",
-    "reflect-metadata": "^0.1.13",
-    "source-map-support": "^0.5.19"
-  }
+    "strapi": "3.1.4",
+    "strapi-admin": "3.1.4",
+    "strapi-utils": "3.1.4",
+    "strapi-plugin-content-type-builder": "3.1.4",
+    "strapi-plugin-content-manager": "3.1.4",
+    "strapi-plugin-users-permissions": "3.1.4",
+    "strapi-plugin-email": "3.1.4",
+    "strapi-plugin-upload": "3.1.4",
+    "strapi-connector-bookshelf": "3.1.4",
+    "knex": "<0.20.0",
+    "pg": "latest"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "49d9a4d7-69fc-4f2e-b84a-acb6abefccd3"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
