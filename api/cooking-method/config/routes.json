@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cooking-methods",
+      "handler": "cooking-method.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cooking-methods/count",
+      "handler": "cooking-method.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cooking-methods/:id",
+      "handler": "cooking-method.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cooking-methods",
+      "handler": "cooking-method.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cooking-methods/:id",
+      "handler": "cooking-method.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cooking-methods/:id",
+      "handler": "cooking-method.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

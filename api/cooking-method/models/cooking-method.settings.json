@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cooking_methods",
+  "info": {
+    "name": "Cooking Method"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "collection": "ingredient",
+      "via": "cooking_method"
+    },
+    "meals": {
+      "via": "cooking_method",
+      "collection": "meal"
+    }
+  }
+}
