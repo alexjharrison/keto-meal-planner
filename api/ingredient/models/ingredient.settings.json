@@ -14,9 +14,9 @@
       "required": true,
       "unique": true
     },
-    "cooking_method": {
-      "via": "ingredients",
-      "model": "cooking-method"
+    "cooking_methods": {
+      "via": "ingredient",
+      "collection": "cooking-method"
     }
   }
 }

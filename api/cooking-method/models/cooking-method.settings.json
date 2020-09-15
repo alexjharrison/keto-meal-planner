@@ -12,9 +12,9 @@
     "name": {
       "type": "string"
     },
-    "ingredients": {
-      "collection": "ingredient",
-      "via": "cooking_method"
+    "ingredient": {
+      "model": "ingredient",
+      "via": "cooking_methods"
     },
     "meals": {
       "via": "cooking_method",
