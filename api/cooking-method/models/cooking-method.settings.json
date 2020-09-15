@@ -16,9 +16,9 @@
       "model": "ingredient",
       "via": "cooking_methods"
     },
-    "meals": {
+    "dishes": {
       "via": "cooking_method",
-      "collection": "meal"
+      "collection": "dish"
     }
   }
 }

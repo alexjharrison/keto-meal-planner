@@ -30,7 +30,7 @@
       "collection": "ingredient"
     },
     "dish": {
-      "model": "meal"
+      "model": "dish"
     }
   }
 }

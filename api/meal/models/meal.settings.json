@@ -1,50 +1,21 @@
 {
   "kind": "collectionType",
-  "collectionName": "dishes",
+  "collectionName": "meals",
   "info": {
-    "name": "Dish"
+    "name": "Meal"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "Name": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
-    "ingredients": {
-      "collection": "ingredient"
-    },
-    "image": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "calories": {
-      "type": "integer"
-    },
-    "net_carbs": {
-      "type": "decimal"
-    },
-    "cooking_method": {
-      "model": "cooking-method",
-      "via": "meals"
-    },
-    "meal": {
-      "type": "enumeration",
-      "enum": [
-        "Breakfast",
-        "Lunch",
-        "Dinner",
-        "Dessert",
-        "Snack"
-      ]
+    "dishes": {
+      "collection": "dish",
+      "via": "meal"
     }
   }
 }
