@@ -53,12 +53,12 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    '@nuxtjs/proxy',
     '@nuxtjs/strapi',
+    '@nuxtjs/proxy',
   ],
 
   proxy: {
-    '/api': { target: 'http://localhost:1338', pathRewrite: { '^/api': '/' } },
+    '/api': { target: 'http://localhost:1338', pathRewrite: { '^/api': '' } },
     '/admin': 'http://localhost:1338',
     '/content-manager': 'http://localhost:1338',
     '/content-type-builder': 'http://localhost:1338',
@@ -67,7 +67,7 @@ export default {
   },
 
   strapi: {
-    url: 'http://localhost:1338/api',
+    url: 'http://localhost:1338',
     entities: [
       'components',
       'cooking-methods',

@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  async mounted() {
+    await this.$strapi.login({
+      identifier: 'alexmon3210',
+      password: 'password',
+    })
+  },
+}
+</script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

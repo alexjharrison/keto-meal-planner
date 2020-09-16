@@ -3,6 +3,8 @@
     <div>
       <Logo />
       <h1 class="title">keto-meal-planner</h1>
+      <p>{{ $strapi.user }}</p>
+      <p>{{ ingredients }}</p>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -26,7 +28,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async fetch() {
+    this.ingredients = await this.$strapi.$ingredients.find()
+  },
+  data() {
+    return {
+      ingredients: null,
+    }
+  },
+}
 </script>
 
 <style>
