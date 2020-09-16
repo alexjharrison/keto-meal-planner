@@ -54,6 +54,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     '@nuxtjs/proxy',
+    '@nuxtjs/strapi',
   ],
 
   proxy: {
@@ -63,6 +64,18 @@ export default {
     '/content-type-builder': 'http://localhost:1338',
     '/upload': 'http://localhost:1338',
     '/users-permissions': 'http://localhost:1338',
+  },
+
+  strapi: {
+    url: 'http://localhost:1338/api',
+    entities: [
+      'components',
+      'cooking-methods',
+      'dishes',
+      'ingredients',
+      'meals',
+      'recipes',
+    ],
   },
 
   /*
