@@ -1,8 +1,7 @@
 <template>
   <div>
     <app-header />
-    {{ $strapi.user }}
-    <b-container fluid="xl">
+    <b-container fluid="xl" class="py-4">
       <nuxt />
     </b-container>
   </div>

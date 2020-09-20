@@ -1,10 +1,5 @@
 export default {
   /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'universal',
-  /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
@@ -75,10 +70,11 @@ export default {
     '/content-type-builder': 'http://localhost:1338',
     '/upload': 'http://localhost:1338',
     '/users-permissions': 'http://localhost:1338',
+    '/graphql': 'http://localhost:1338',
   },
 
   strapi: {
-    url: 'http://localhost:1338',
+    url: 'https://ketomealplanner.aharrison.xyz/api',
     entities: [
       'components',
       'cooking-methods',
