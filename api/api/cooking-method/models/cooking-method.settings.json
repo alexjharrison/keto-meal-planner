@@ -17,7 +17,7 @@
       "via": "cooking_methods"
     },
     "dishes": {
-      "via": "cooking_method",
+      "via": "cooking_methods",
       "collection": "dish"
     }
   }

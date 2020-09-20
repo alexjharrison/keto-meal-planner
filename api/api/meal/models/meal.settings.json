@@ -13,13 +13,13 @@
       "type": "string",
       "required": true
     },
-    "dishes": {
-      "collection": "dish",
-      "via": "meal"
-    },
     "component": {
       "via": "meals",
       "model": "component"
+    },
+    "dishes": {
+      "via": "meals",
+      "collection": "dish"
     }
   }
 }

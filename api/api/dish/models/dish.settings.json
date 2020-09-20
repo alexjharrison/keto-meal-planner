@@ -32,23 +32,15 @@
     "net_carbs": {
       "type": "decimal"
     },
-    "cooking_method": {
-      "model": "cooking-method",
-      "via": "dishes"
-    },
-    "dish": {
-      "type": "enumeration",
-      "enum": [
-        "Breakfast",
-        "Lunch",
-        "Dinner",
-        "Dessert",
-        "Snack"
-      ]
-    },
-    "meal": {
+    "cooking_methods": {
+      "collection": "cooking-method",
       "via": "dishes",
-      "model": "meal"
+      "dominant": true
+    },
+    "meals": {
+      "collection": "meal",
+      "via": "dishes",
+      "dominant": true
     }
   }
 }
