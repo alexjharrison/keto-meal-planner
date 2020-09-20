@@ -7,7 +7,14 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/test">test</b-nav-item>
+          <b-nav-item
+            v-for="page in pages"
+            :key="page.name"
+            :active="$route.path.startsWith(page.path)"
+            :to="page.path"
+            >{{ page.name }}</b-nav-item
+          >
+          <login-box />
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -15,5 +22,18 @@
 </template>
 
 <script>
-export default {}
+import LoginBox from './LoginBox'
+
+export default {
+  components: { LoginBox },
+  data() {
+    const pages = ['ingredients', 'components', 'dishes', 'recipes']
+    return {
+      pages: pages.map(name => ({
+        name: name.charAt(0).toUpperCase() + name.slice(1),
+        path: '/' + name,
+      })),
+    }
+  },
+}
 </script>

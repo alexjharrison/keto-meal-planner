@@ -1,6 +1,7 @@
 <template>
   <div>
     <app-header />
+    {{ $strapi.user }}
     <b-container fluid="xl">
       <nuxt />
     </b-container>
@@ -9,19 +10,8 @@
 
 <script>
 import AppHeader from '@/components/header/AppHeader'
+import '@/assets/scss/bootstrap.scss'
 export default {
   components: { AppHeader },
-  async mounted() {
-    await this.$strapi.login({
-      identifier: 'alexmon3210',
-      password: 'password',
-    })
-  },
 }
 </script>
-
-<style>
-main {
-  @apply contain;
-}
-</style>

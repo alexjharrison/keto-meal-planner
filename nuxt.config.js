@@ -57,6 +57,11 @@ export default {
     '@nuxtjs/proxy',
   ],
 
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
+  },
+
   proxy: {
     '/api': { target: 'http://localhost:1338', pathRewrite: { '^/api': '' } },
     '/admin': 'http://localhost:1338',
